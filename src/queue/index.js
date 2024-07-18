@@ -1,3 +1,7 @@
+const Deque = require("./deque");
 const Queue = require("./queue");
 
-module.exports = {Queue};
+module.exports = {
+    Queue,
+    Deque
+};
