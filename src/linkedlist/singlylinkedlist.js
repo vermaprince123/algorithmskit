@@ -1,76 +1,60 @@
-const LinkedListNode = require("./linkedlistnode")
+const LinkedListNode = require("./linkedlistnode");
 
-
-
-class SinglyLinkedList{
-    constructor(value){
-        this.head = new LinkedListNode(value);
+class SinglyLinkedList {
+    constructor(value = null) {
+        this.head = value !== null ? new LinkedListNode(value) : null;
     }
 
-    addLast(value){
-        if(!this.head){
-            this.head = new LinkedListNode(value);
+    addLast(value) {
+        const newNode = new LinkedListNode(value);
+        if (!this.head) {
+            this.head = newNode;
+            return;
         }
         let curr = this.head;
-
-        while(curr.next){
+        while (curr.next) {
             curr = curr.next;
         }
-
-        const newNode = new LinkedListNode(value);
         curr.next = newNode;
     }
 
-    addFirst(value){
-        if(!this.head){
-            this.head = new LinkedListNode(value);
-        }
-
-        let newHead = new LinkedListNode(value);
-        
+    addFirst(value) {
+        const newHead = new LinkedListNode(value);
         newHead.next = this.head;
         this.head = newHead;
     }
 
-    returnFirst(){
-        if(!this.head) return -1;
-
+    returnFirst() {
+        if (!this.head) return -1;
         return this.head.value;
     }
 
-    returnLast(){
-        if(!this.head) return -1;
-
-        let curr = head;
-
-        while(curr.next){
+    returnLast() {
+        if (!this.head) return -1;
+        let curr = this.head;
+        while (curr.next) {
             curr = curr.next;
         }
-
         return curr.value;
     }
 
-    deleteFirst(){
-        if(!this.head) return;
-
-        head = head.next;
+    deleteFirst() {
+        if (!this.head) return;
+        this.head = this.head.next;
     }
 
-    deleteLast(){
-        if(!this.head) return;
-
-        let prev = head;
-        let curr = head.next;
-
-        while(curr && curr.next){
-            prev = curr;
+    deleteLast() {
+        if (!this.head) return;
+        if (!this.head.next) {
+            this.head = null;
+            return;
+        }
+        let curr = this.head;
+        while (curr.next && curr.next.next) {
             curr = curr.next;
         }
-
-        prev.next = null;
+        curr.next = null;
     }
-
-
 }
 
 module.exports = SinglyLinkedList;
