@@ -1,3 +1,8 @@
+/**
+ * Performs Radix Sort on the given array.
+ * @param {number[]} arr - The array to be sorted.
+ * @returns {number[]} - The sorted array.
+ */
 function radixSort(arr) {
     if (arr.length === 0) return arr; 
     const maxi = Math.max(...arr);
