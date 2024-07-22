@@ -1,3 +1,4 @@
+const { checkNumber } = require('../utils/typeCheckingFunctions');
 const Stack = require('./stack');
 
 /**
@@ -25,12 +26,22 @@ class MonotonicStack extends Stack {
         this.capacity = 1000;
     }
 
+    _checkInputType(value){
+        try{
+            checkNumber(value);
+        }
+        catch(error){
+            throw error;
+        }
+    }
+
     /**
      * Pushes a key into the MonotonicStack. Ensures the stack remains monotonic.
      * @param {number} key - The key to be pushed into the stack.
      * @returns {number} - The key at the top of the stack after the push operation.
      */
     push(key) {
+        this._checkInputType(key);
         if (this.isIncreasing) {
             while (this.peek() !== -1 && this.peek() >= key) {
                 this.pop();

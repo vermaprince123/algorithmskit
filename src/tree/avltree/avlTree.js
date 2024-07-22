@@ -1,6 +1,18 @@
+const { checkNumber } = require("../../utils/typeCheckingFunctions");
+const AVLTreeNode = require("./avlTreeNode");
+
 class AVLTree {
     constructor() {
         this.root = null;
+    }
+
+    _checkInputType(value){
+        try{
+            checkNumber(value);
+        }
+        catch(error){
+            throw error;
+        }
     }
 
     getHeight(node) {
@@ -40,6 +52,7 @@ class AVLTree {
     }
 
     insert(value) {
+        this._checkInputType(value);
         this.root = this._insertNode(this.root, value);
     }
 

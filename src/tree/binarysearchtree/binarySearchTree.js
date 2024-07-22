@@ -1,3 +1,4 @@
+const { checkNumber } = require("../../utils/typeCheckingFunctions");
 const BinaryTreeNode = require("./binaryTreeNode");
 
 class BinarySearchTree {
@@ -5,7 +6,17 @@ class BinarySearchTree {
         this.root = null;
     }
 
+    _checkInputType(value){
+        try{
+            checkNumber(value);
+        }
+        catch(error){
+            throw error;
+        }
+    }
+
     insert(value) {
+        this._checkInputType(value);
         const newNode = new BinaryTreeNode(value);
 
         if (!this.root) {
@@ -32,6 +43,7 @@ class BinarySearchTree {
     }
 
     search(value) {
+        this._checkInputType(value);
         return this._searchNode(this.root, value);
     }
 

@@ -1,3 +1,4 @@
+const { checkNumber } = require("../utils/typeCheckingFunctions");
 const LinkedListNode = require("./linkedlistnode");
 
 /**
@@ -8,7 +9,18 @@ class SinglyLinkedList {
      * Creates an instance of SinglyLinkedList.
      * @param {any} [value=null] - The initial value to be added to the list.
      */
+
+    _checkInputType(value){
+        try{
+            checkNumber(value);
+        }
+        catch(error){
+            throw error;
+        }
+    }
+
     constructor(value = null) {
+        value && this._checkInputType(value);
         /**
          * The head node of the linked list.
          * @type {LinkedListNode|null}
@@ -21,6 +33,7 @@ class SinglyLinkedList {
      * @param {any} value - The value to be added.
      */
     addLast(value) {
+        this._checkInputType(value);
         const newNode = new LinkedListNode(value);
         if (!this.head) {
             this.head = newNode;
@@ -38,6 +51,7 @@ class SinglyLinkedList {
      * @param {any} value - The value to be added.
      */
     addFirst(value) {
+        this._checkInputType(value);
         const newHead = new LinkedListNode(value);
         newHead.next = this.head;
         this.head = newHead;

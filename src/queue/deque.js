@@ -1,3 +1,4 @@
+const { checkNumber } = require("../utils/typeCheckingFunctions");
 const DoublyLinkedList = require("./doublylinkedlist");
 
 class Deque {
@@ -7,7 +8,17 @@ class Deque {
         this.capacity = 10000;
     }
 
+    _checkInputType(value){
+        try{
+            checkNumber(value);
+        }
+        catch(error){
+            throw error;
+        }
+    }
+
     addFront(value) {
+        this._checkInputType(value);
         if(this.size === this.capacity){
             console.log("Deque Full!");
             return;
@@ -17,6 +28,7 @@ class Deque {
     }
 
     addRear(value) {
+        this._checkInputType(value);
         if(this.size === this.capacity){
             console.log("Deque Full!");
             return;

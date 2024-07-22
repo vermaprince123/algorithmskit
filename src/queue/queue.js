@@ -1,3 +1,4 @@
+const { checkNumber } = require("../utils/typeCheckingFunctions");
 const SinglyLinkedList = require("./singlylinkedlist");
 
 class Queue {
@@ -6,7 +7,17 @@ class Queue {
         this.size = 0;
     }
 
+    _checkInputType(value){
+        try{
+            checkNumber(value);
+        }
+        catch(error){
+            throw error;
+        }
+    }
+
     enqueue(value) {
+        this._checkInputType(value);
         this.list.addLast(value);
         this.size++;
     }

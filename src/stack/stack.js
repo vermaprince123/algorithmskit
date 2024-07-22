@@ -1,3 +1,4 @@
+const { checkNumber } = require("../utils/typeCheckingFunctions");
 const SinglyLinkedList = require("../linkedlist/singlylinkedlist");
 
 /**
@@ -28,11 +29,21 @@ class Stack {
         this.size = 0;
     }
 
+    _checkInputType(value){
+        try{
+            checkNumber(value);
+        }
+        catch(error){
+            throw error;
+        }
+    }
+
     /**
      * Pushes a value onto the stack.
      * @param {number} value - The value to be pushed onto the stack.
      */
     push(value) {
+        this._checkInputType(value);
         if (this.size === this.capacity) {
             console.log("Stack Full!");
             return;

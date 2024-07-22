@@ -1,10 +1,19 @@
+const { checkNumberArray } = require("../utils/typeCheckingFunctions");
+
+
 /**
  * Performs Count Sort on the given array.
  * @param {number[]} arr - The array to be sorted.
  * @returns {number[]} - The sorted array.
  */
-
 function countSort(arr){
+    try{
+        checkNumberArray(arr);
+    }
+    catch (error){
+        throw error;
+    }
+    
     const n = arr.length;
 
     const maxi = Math.max(...arr);
