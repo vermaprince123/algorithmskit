@@ -1,30 +1,51 @@
 const { checkNumber } = require("../../utils/typeCheckingFunctions");
 const AVLTreeNode = require("./avlTreeNode");
 
+/**
+ * Class representing an AVL Tree.
+ */
 class AVLTree {
     constructor() {
+        /**
+         * The root node of the AVL Tree.
+         * @type {AVLTreeNode|null}
+         */
         this.root = null;
     }
 
-    _checkInputType(value){
-        try{
+    _checkInputType(value) {
+        try {
             checkNumber(value);
-        }
-        catch(error){
+        } catch (error) {
             throw error;
         }
     }
 
+    /**
+     * Gets the height of a node.
+     * @param {AVLTreeNode|null} node - The node to get the height of.
+     * @returns {number} The height of the node.
+     */
     getHeight(node) {
         if (!node) return 0;
         return node.height;
     }
 
+    /**
+     * Gets the balance factor of a node.
+     * @param {AVLTreeNode|null} node - The node to get the balance factor of.
+     * @returns {number} The balance factor of the node.
+     */
     getBalanceFactor(node) {
         if (!node) return 0;
         return this.getHeight(node.left) - this.getHeight(node.right);
     }
 
+    /**
+     * Performs a right rotation on the given node.
+     * @param {AVLTreeNode} y - The node to rotate.
+     * @returns {AVLTreeNode} The new root of the rotated subtree.
+     */
     rotateRight(y) {
         let x = y.left;
         let T2 = x.right;
@@ -38,6 +59,11 @@ class AVLTree {
         return x;
     }
 
+    /**
+     * Performs a left rotation on the given node.
+     * @param {AVLTreeNode} x - The node to rotate.
+     * @returns {AVLTreeNode} The new root of the rotated subtree.
+     */
     rotateLeft(x) {
         let y = x.right;
         let T2 = y.left;
@@ -51,11 +77,22 @@ class AVLTree {
         return y;
     }
 
+    /**
+     * Inserts a value into the AVL Tree.
+     * @param {number} value - The value to insert.
+     */
     insert(value) {
         this._checkInputType(value);
         this.root = this._insertNode(this.root, value);
     }
 
+    /**
+     * Inserts a value into the subtree rooted at the given node.
+     * @param {AVLTreeNode|null} node - The root of the subtree.
+     * @param {number} value - The value to insert.
+     * @returns {AVLTreeNode} The new root of the subtree.
+     * @private
+     */
     _insertNode(node, value) {
         if (!node) return new AVLTreeNode(value);
 
@@ -70,7 +107,6 @@ class AVLTree {
         node.height = 1 + Math.max(this.getHeight(node.left), this.getHeight(node.right));
 
         let balance = this.getBalanceFactor(node);
-
 
         // Left Left Case
         if (balance > 1 && value < node.left.value) {
@@ -97,6 +133,11 @@ class AVLTree {
         return node;
     }
 
+    /**
+     * Performs an in-order traversal of the AVL Tree.
+     * @param {AVLTreeNode|null} [node=this.root] - The node to start traversal from.
+     * @returns {number[]} The values of the nodes in in-order sequence.
+     */
     inOrderTraversal(node = this.root) {
         let result = [];
 
@@ -112,6 +153,5 @@ class AVLTree {
         return result;
     }
 }
-
 
 module.exports = AVLTree;

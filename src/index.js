@@ -1,9 +1,9 @@
-import { SinglyLinkedList, DoublyLinkedList } from "./linkedlist";
-import { Queue, Deque } from "./queue";
-import { countSort, radixSort, randomizedQuickSort } from "./sorting";
-import { MonotonicStack, Stack } from "./stack";
-import { AVLTree, BinarySearchTree, FenwickTree } from "./tree";
-import { Trie } from "./trie";
+const {SinglyLinkedList, DoublyLinkedList} = require("./linkedlist")
+const { Queue, Deque } = require("./queue");
+const { countSort, radixSort, randomizedQuickSort } = require("./sorting");
+const { MonotonicStack, Stack } = require("./stack");
+const { AVLTree, BinarySearchTree, FenwickTree } = require("./tree");
+const { Trie } = require("./trie");
 
 module.exports = {
     DoublyLinkedList,

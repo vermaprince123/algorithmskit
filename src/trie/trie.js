@@ -1,3 +1,5 @@
+const TrieNode = require("./trienode");
+
 /**
  * @class
  * Represents a Trie (prefix tree) data structure.
