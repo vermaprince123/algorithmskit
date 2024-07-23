@@ -1,6 +1,5 @@
 const { checkNumber } = require('../utils/typeCheckingFunctions');
-const Stack = require('./stack');
-
+const Stack = require("./stack"); 
 /**
  * Class representing a Monotonic Stack.
  * A Monotonic Stack is a stack where the elements are in increasing or decreasing order.

@@ -57,7 +57,7 @@ class DoublyLinkedList {
 
     deleteFirst() {
         if (!this.head) return;
-        if (this.head === this.tail) { // Only one node
+        if (this.head === this.tail) {
             this.head = null;
             this.tail = null;
             return;
@@ -68,7 +68,7 @@ class DoublyLinkedList {
 
     deleteLast() {
         if (!this.tail) return;
-        if (this.head === this.tail) { // Only one node
+        if (this.head === this.tail) {
             this.head = null;
             this.tail = null;
             return;

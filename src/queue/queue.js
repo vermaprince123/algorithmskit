@@ -1,5 +1,5 @@
 const { checkNumber } = require("../utils/typeCheckingFunctions");
-const SinglyLinkedList = require("./singlylinkedlist");
+const {SinglyLinkedList} = require("../linkedlist");
 
 class Queue {
     constructor() {

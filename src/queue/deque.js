@@ -1,5 +1,5 @@
 const { checkNumber } = require("../utils/typeCheckingFunctions");
-const DoublyLinkedList = require("./doublylinkedlist");
+const {DoublyLinkedList} = require("../linkedlist");
 
 class Deque {
     constructor() {

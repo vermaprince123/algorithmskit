@@ -75,11 +75,30 @@ class Stack {
      */
     peek() {
         if (this.size === 0) {
-            console.log("No elements inside Stack");
             return -1;  // Indicating the stack is empty
         }
 
         return this.stackList.returnFirst();
+    }
+
+    isEmpty() {
+        return this.size === 0;
+    }
+
+    getSize() {
+        return this.size;
+    }
+
+    printStack() {
+        let curr = this.stackList.head;
+        const elements = [];
+
+        while (curr && curr.value !== -1) {
+            elements.push(curr.value);
+            curr = curr.next;
+        }
+
+        console.log("Stack:", elements.join(" -> "));
     }
 }
 
