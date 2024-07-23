@@ -1,3 +1,4 @@
+const MonotonicStack = require("./monotonicStack");
 const Stack = require("./stack");
 
-module.exports = {Stack}
+module.exports = {MonotonicStack, Stack}

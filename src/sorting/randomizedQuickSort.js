@@ -1,10 +1,19 @@
+const { checkNumberArray } = require("../utils/typeCheckingFunctions");
+
+
 /**
  * Performs Randomized Quick Sort on the given array.
  * @param {number[]} arr - The array to be sorted.
  * @returns {number[]} - The sorted array.
  */
-
 function randomizedQuickSort(arr) {
+    try{
+        checkNumberArray(arr);
+    }
+    catch (error){
+        throw error;
+    }
+    
     if (arr.length <= 1) return arr;  // Edge case: empty or single-element array
     quickSort(0, arr.length - 1, arr);
     return arr;

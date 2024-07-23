@@ -1,12 +1,25 @@
+const { checkNumber } = require("../utils/typeCheckingFunctions");
 const LinkedListNode = require("./linkedlistnode");
 
 class DoublyLinkedList {
     constructor(value = null) {
+        value && this._checkInputType(value);
         this.head = value !== null ? new LinkedListNode(value) : null;
         this.tail = this.head;
     }
 
+    _checkInputType(value){
+        try{
+            checkNumber(value);
+        }
+        catch(error){
+            throw error;
+        }
+    }
+
     addLast(value) {
+        this._checkInputType(value);
+
         const newNode = new LinkedListNode(value);
         if (!this.head) {
             this.head = newNode;
@@ -19,6 +32,8 @@ class DoublyLinkedList {
     }
 
     addFirst(value) {
+        this._checkInputType(value);
+
         const newHead = new LinkedListNode(value);
         if (!this.head) {
             this.head = newHead;
@@ -42,7 +57,7 @@ class DoublyLinkedList {
 
     deleteFirst() {
         if (!this.head) return;
-        if (this.head === this.tail) { // Only one node
+        if (this.head === this.tail) {
             this.head = null;
             this.tail = null;
             return;
@@ -53,7 +68,7 @@ class DoublyLinkedList {
 
     deleteLast() {
         if (!this.tail) return;
-        if (this.head === this.tail) { // Only one node
+        if (this.head === this.tail) {
             this.head = null;
             this.tail = null;
             return;

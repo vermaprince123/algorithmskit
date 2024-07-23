@@ -1,4 +1,17 @@
+const { checkNumberArray } = require("../utils/typeCheckingFunctions");
+
+/**
+ * Performs Radix Sort on the given array.
+ * @param {number[]} arr - The array to be sorted.
+ * @returns {number[]} - The sorted array.
+ */
 function radixSort(arr) {
+    try{
+        checkNumberArray(arr);
+    }
+    catch (error){
+        throw error;
+    }
     if (arr.length === 0) return arr; 
     const maxi = Math.max(...arr);
     let base = 1;
