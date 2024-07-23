@@ -8,8 +8,6 @@
 npm install algorithmskit
 ```
 
-# AlgorithmsKit
-
 ## Classes and Methods
 
 ### Singly Linked List (SinglyLinkedList class)
