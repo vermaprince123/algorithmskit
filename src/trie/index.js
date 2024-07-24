@@ -1,3 +1,4 @@
 const Trie = require("./trie");
+const TrieNode = require("./trienode");
 
-module.exports = {Trie};
+module.exports = {Trie, TrieNode};
