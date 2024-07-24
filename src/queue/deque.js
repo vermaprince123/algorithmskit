@@ -1,10 +1,10 @@
-const { checkNumber } = require("../utils/typeCheckingFunctions");
-const { DoublyLinkedList } = require("../linkedlist");
+import checkNumber from "../utils/typeCheckingFunctions";
+import  { DoublyLinkedList } from "../linkedlist";
 
 /**
  * Class representing a Deque (Double-ended Queue) data structure.
  */
-class Deque {
+export class Deque {
     /**
      * Create a Deque.
      */
@@ -137,5 +137,3 @@ class Deque {
         console.log("Deque:", elements.join(" -> "));
     }
 }
-
-module.exports = Deque;

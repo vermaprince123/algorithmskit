@@ -1,7 +1,6 @@
-const { checkNumber } = require("../../utils/typeCheckingFunctions");
+import { checkNumber } from "../../utils/typeCheckingFunctions";
 
-
-class AVLTreeNode {
+export class AVLTreeNode {
     constructor(value) {
         try{
             checkNumber(value);
@@ -16,6 +15,3 @@ class AVLTreeNode {
         this.height = 1;
     }
 }
-
-
-module.exports = AVLTreeNode;

@@ -1,11 +1,11 @@
-const { checkNumberArray } = require("../utils/typeCheckingFunctions");
+import { checkNumberArray } from "../utils/typeCheckingFunctions";
 
 /**
  * Performs Radix Sort on the given array.
  * @param {number[]} arr - The array to be sorted.
  * @returns {number[]} - The sorted array.
  */
-function radixSort(arr) {
+export function radixSort(arr) {
     try{
         checkNumberArray(arr);
     }
@@ -46,5 +46,3 @@ function radixSort(arr) {
 
     return arr;
 }
-
-module.exports = radixSort;

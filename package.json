@@ -1,11 +1,12 @@
 {
   "name": "algorithmskit",
-  "version": "1.1.0",
+  "version": "1.2.4",
   "description": "An npm package for several complex algorithms and data structures like randomized quick sort, count sort, disjoint set union, etc.",
-  "main": "dist/bundle.js",
+  "main": "build/index.js",
+  "module": "build/index.js",
   "scripts": {
     "test": "npm run test",
-    "build": "rm -rf build && NODE_ENV=production babel src/ --out-dir build --copy-files"
+    "build": "rm -rf build && NODE_ENV=production babel src --out-dir build --copy-files"
   },
   "repository": {
     "type": "module",

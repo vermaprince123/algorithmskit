@@ -1,10 +1,10 @@
-const { checkNumber } = require("../../utils/typeCheckingFunctions");
-const BinaryTreeNode = require("./binaryTreeNode");
+import { checkNumber } from "../../utils/typeCheckingFunctions";
+import { BinaryTreeNode } from "./binaryTreeNode";
 
 /**
  * Class representing a Binary Search Tree.
  */
-class BinarySearchTree {
+export class BinarySearchTree {
     constructor() {
         /**
          * The root node of the Binary Search Tree.
@@ -169,5 +169,3 @@ class BinarySearchTree {
         return result;
     }
 }
-
-module.exports = BinarySearchTree;

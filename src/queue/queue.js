@@ -1,10 +1,10 @@
-const { checkNumber } = require("../utils/typeCheckingFunctions");
-const { SinglyLinkedList } = require("../linkedlist");
+import checkNumber  from "../utils/typeCheckingFunctions"
+import SinglyLinkedList from "../linkedlist";
 
 /**
  * Class representing a Queue data structure.
  */
-class Queue {
+export class Queue {
     /**
      * Create a Queue.
      */
@@ -101,5 +101,3 @@ class Queue {
         console.log("Queue:", elements.join(" -> "));
     }
 }
-
-module.exports = Queue;

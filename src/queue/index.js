@@ -1,7 +1,3 @@
-const Deque = require("./deque");
-const Queue = require("./queue");
+export { Queue } from "./queue";
+export { Deque } from "./deque";
 
-module.exports = {
-    Queue,
-    Deque
-};

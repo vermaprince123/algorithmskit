@@ -1,7 +1,6 @@
-const { checkNumber } = require("../../utils/typeCheckingFunctions");
+import { checkNumber } from  "../../utils/typeCheckingFunctions";
 
-
-class BinaryTreeNode {
+export class BinaryTreeNode {
     constructor(value) {
         try{
             checkNumber(value);
@@ -15,5 +14,3 @@ class BinaryTreeNode {
         this.right = null;
     }
 }
-
-module.exports = BinaryTreeNode;

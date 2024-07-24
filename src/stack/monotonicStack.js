@@ -1,11 +1,11 @@
-const { checkNumber } = require('../utils/typeCheckingFunctions');
-const Stack = require("./stack"); 
+import { checkNumber } from "../utils/typeCheckingFunctions";
+import { Stack } from "./stack";
 /**
  * Class representing a Monotonic Stack.
  * A Monotonic Stack is a stack where the elements are in increasing or decreasing order.
  * It extends the Stack class.
  */
-class MonotonicStack extends Stack {
+export class MonotonicStack extends Stack {
     /**
      * Creates an instance of MonotonicStack.
      * @param {boolean} [isIncreasing=true] - If true, the stack is monotonic increasing; otherwise, it is monotonic decreasing.
@@ -58,5 +58,3 @@ class MonotonicStack extends Stack {
         return topKey;
     }
 }
-
-module.exports = MonotonicStack;

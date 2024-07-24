@@ -1,10 +1,9 @@
 const { checkNumber } = require("../../utils/typeCheckingFunctions");
-const AVLTreeNode = require("./avlTreeNode");
-
+const { AVLTreeNode } = require("./avlTreeNode");
 /**
  * Class representing an AVL Tree.
  */
-class AVLTree {
+export class AVLTree {
     constructor() {
         /**
          * The root node of the AVL Tree.
@@ -153,5 +152,3 @@ class AVLTree {
         return result;
     }
 }
-
-module.exports = AVLTree;

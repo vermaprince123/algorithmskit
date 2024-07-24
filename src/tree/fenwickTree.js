@@ -1,9 +1,9 @@
-const { checkNumber, checkNumberArray } = require("../utils/typeCheckingFunctions");
+import { checkNumber, checkNumberArray } from "../utils/typeCheckingFunctions";
 
 /**
  * Class representing a Fenwick Tree (Binary Indexed Tree).
  */
-class FenwickTree {
+export class FenwickTree {
     /**
      * Create a Fenwick Tree.
      * @param {number} size - The size of the tree.
@@ -85,5 +85,3 @@ class FenwickTree {
         return this.query(r) - this.query(l - 1);
     }
 }
-
-module.exports = FenwickTree;

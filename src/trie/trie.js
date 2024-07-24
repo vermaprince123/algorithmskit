@@ -1,10 +1,9 @@
-const TrieNode = require("./trienode");
-
+import { TrieNode } from "./trienode";
 /**
  * @class
  * Represents a Trie (prefix tree) data structure.
  */
-class Trie {
+export class Trie {
     /**
      * Creates an instance of Trie.
      */
@@ -103,5 +102,3 @@ class Trie {
         return true;
     }
 }
-
-module.exports = Trie;

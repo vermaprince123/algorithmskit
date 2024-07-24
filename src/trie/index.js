@@ -1,4 +1,2 @@
-const Trie = require("./trie");
-const TrieNode = require("./trienode");
-
-module.exports = {Trie, TrieNode};
+export { Trie } from "./trie";
+export { TrieNode } from "./trienode";

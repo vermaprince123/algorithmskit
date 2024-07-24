@@ -1,11 +1,10 @@
-const { checkNumber } = require("../utils/typeCheckingFunctions");
-const SinglyLinkedList = require("../linkedlist/singlylinkedlist");
-
+import { checkNumber } from "../utils/typeCheckingFunctions";
+import { SinglyLinkedList } from "../linkedlist"
 /**
  * Class representing a Stack.
  * A stack is a data structure that follows the Last In First Out (LIFO) principle.
  */
-class Stack {
+export class Stack {
     /**
      * Creates an instance of Stack.
      */
@@ -101,5 +100,3 @@ class Stack {
         console.log("Stack:", elements.join(" -> "));
     }
 }
-
-module.exports = Stack;

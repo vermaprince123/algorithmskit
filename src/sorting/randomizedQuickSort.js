@@ -1,4 +1,4 @@
-const { checkNumberArray } = require("../utils/typeCheckingFunctions");
+import { checkNumberArray } from "../utils/typeCheckingFunctions";
 
 
 /**
@@ -6,7 +6,7 @@ const { checkNumberArray } = require("../utils/typeCheckingFunctions");
  * @param {number[]} arr - The array to be sorted.
  * @returns {number[]} - The sorted array.
  */
-function randomizedQuickSort(arr) {
+export function randomizedQuickSort(arr) {
     try{
         checkNumberArray(arr);
     }
@@ -56,5 +56,3 @@ function partition(start, end, arr) {
 
     return right;
 }
-
-module.exports = randomizedQuickSort;
