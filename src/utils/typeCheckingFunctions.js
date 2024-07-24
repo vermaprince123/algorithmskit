@@ -3,7 +3,7 @@
  * @param {any} input - The input to be checked.
  * @throws Will throw an error if the input is not an array of numbers.
  */
-function checkNumberArray(input) {
+export function checkNumberArray(input) {
     if (!Array.isArray(input)) {
         throw new Error("Input is not an array");
     }
@@ -19,9 +19,8 @@ function checkNumberArray(input) {
  * @param {any} input - The input to be checked.
  * @throws Will throw an error if the input is not an array of numbers.
  */
-function checkNumber(input) {
+export function checkNumber(input) {
     if(typeof input !== 'number') throw new Error("Input is not a number");
 }
 
-module.exports = {checkNumberArray, checkNumber};
 

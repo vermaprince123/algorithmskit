@@ -1,4 +1,4 @@
-const { checkNumberArray } = require("../utils/typeCheckingFunctions");
+import { checkNumberArray } from "../utils/typeCheckingFunctions";
 
 
 /**
@@ -6,7 +6,7 @@ const { checkNumberArray } = require("../utils/typeCheckingFunctions");
  * @param {number[]} arr - The array to be sorted.
  * @returns {number[]} - The sorted array.
  */
-function countSort(arr){
+export function countSort(arr){
     try{
         checkNumberArray(arr);
     }
@@ -42,5 +42,3 @@ function countSort(arr){
 
     return ans;
 };
-
-module.exports = countSort;

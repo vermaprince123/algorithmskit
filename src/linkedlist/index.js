@@ -1,4 +1,2 @@
-const DoublyLinkedList = require("./doublyLinkedList");
-const SinglyLinkedList = require("./singlylinkedlist");
-
-module.exports = {SinglyLinkedList, DoublyLinkedList};
+export { DoublyLinkedList } from "./doublyLinkedList";
+export { SinglyLinkedList } from "./singlylinkedlist";

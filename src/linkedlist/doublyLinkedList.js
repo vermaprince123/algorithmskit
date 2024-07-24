@@ -1,7 +1,7 @@
-const { checkNumber } = require("../utils/typeCheckingFunctions");
-const LinkedListNode = require("./linkedlistnode");
+import { checkNumber } from "../utils/typeCheckingFunctions";
+import { LinkedListNode } from "./linkedlistnode";
 
-class DoublyLinkedList {
+export class DoublyLinkedList {
     constructor(value = null) {
         value && this._checkInputType(value);
         this.head = value !== null ? new LinkedListNode(value) : null;
@@ -78,4 +78,3 @@ class DoublyLinkedList {
     }
 }
 
-module.exports = DoublyLinkedList;

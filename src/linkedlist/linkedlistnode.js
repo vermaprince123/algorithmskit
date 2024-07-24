@@ -1,6 +1,6 @@
-const { checkNumber } = require("../utils/typeCheckingFunctions");
+import { checkNumber } from "../utils/typeCheckingFunctions";
 
-class LinkedListNode{
+export class LinkedListNode{
     constructor(value){
         try{
             checkNumber(value);
@@ -14,5 +14,3 @@ class LinkedListNode{
         this.prev = null;
     }
 }
-
-module.exports = LinkedListNode;

@@ -1,10 +1,10 @@
-const { checkNumber } = require("../utils/typeCheckingFunctions");
-const LinkedListNode = require("./linkedlistnode");
+import { checkNumber } from "../utils/typeCheckingFunctions";
+import { LinkedListNode } from  "./linkedlistnode";
 
 /**
  * Class representing a singly linked list.
  */
-class SinglyLinkedList {
+export class SinglyLinkedList {
     /**
      * Creates an instance of SinglyLinkedList.
      * @param {any} [value=null] - The initial value to be added to the list.
@@ -104,4 +104,3 @@ class SinglyLinkedList {
     }
 }
 
-module.exports = SinglyLinkedList;
