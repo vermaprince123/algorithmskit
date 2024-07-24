@@ -4,6 +4,7 @@ const { countSort, radixSort, randomizedQuickSort } = require("./sorting");
 const { MonotonicStack, Stack } = require("./stack");
 const { AVLTree, BinarySearchTree, FenwickTree } = require("./tree");
 const { Trie } = require("./trie");
+const { Heap } = require("./heap")
 
 module.exports = {
     DoublyLinkedList,
@@ -18,5 +19,6 @@ module.exports = {
     AVLTree,
     BinarySearchTree,
     FenwickTree,
-    Trie
+    Trie,
+    Heap
 }
