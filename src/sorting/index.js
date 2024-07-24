@@ -1,4 +1,4 @@
-const countSort = require("./countsort");
+const countSort = require("./countSort");
 const radixSort = require("./radixSort");
 const randomizedQuickSort = require("./randomizedQuickSort");
 

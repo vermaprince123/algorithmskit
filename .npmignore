@@ -1,0 +1,7 @@
+node_modules
+src
+*.config.js
+*.babelrc
+*.log
+dist/*
+!dist/bundle.js
