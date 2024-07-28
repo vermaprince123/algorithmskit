@@ -1,3 +1,4 @@
+export { Heap } from "./heap";
 export { SinglyLinkedList, DoublyLinkedList} from "./linkedlist";
 export { Queue, Deque } from "./queue";
 export { countSort, radixSort, randomizedQuickSort } from "./sorting";
