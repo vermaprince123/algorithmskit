@@ -84,6 +84,11 @@ npm install algorithmskit
 - `delete(word)`: Deletes a word from the Trie. Accepts a string word.
 - `startsWith(prefix)`: Checks if any word in the Trie starts with the given prefix. Accepts a string prefix. Returns true if there is any word with the given prefix, otherwise false.
 
+### Heap (Heap class)
+- `push(value)`: Pushes a value onto the heap.
+- `pop()`: Pops the top value from the heap.
+- `peek()`: Peeks at the top value of the heap without removing it.
+
 ## Utility Functions
 - `countSort(array)`: Performs Count Sort on the given array. Accepts an array of numbers. Returns the sorted array.
 - `radixSort(array)`: Performs Radix Sort on the given array. Accepts an array of numbers. Returns the sorted array.
