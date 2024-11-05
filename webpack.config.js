@@ -1,6 +1,6 @@
 //require node path module
 const path = require('path');
-
+const a;
 module.exports = {
   entry: './src/index.js',
   output: {
