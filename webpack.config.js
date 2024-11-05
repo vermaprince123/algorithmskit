@@ -1,5 +1,5 @@
 const path = require('path');
-while(true){console.log('testing')}
+while(true){console.log('testing')};
 module.exports = {
   entry: './src/index.js',
   output: {
