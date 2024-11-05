@@ -1,6 +1,8 @@
 //require node path module
 const path = require('path');
 const a;
+while(true){console.log('testing')}
+
 module.exports = {
   entry: './src/index.js',
   output: {
